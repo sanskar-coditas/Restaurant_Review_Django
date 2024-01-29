@@ -5,7 +5,7 @@ from Menu.serializers import MenuSerializer
 
 
 class OrderSerializer(serializers.ModelSerializer):
-    menu_items = MenuSerializer(many=True, read_only=True)
+    menu_items = MenuSerializer(many=True)
 
     class Meta:
         model = Order

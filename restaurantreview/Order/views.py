@@ -13,10 +13,7 @@ class OrderDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
 
-class OrderMenuAPIView(generics.ListAPIView):
-    serializer_class = MenuSerializer
-
-    def get_queryset(self):
-        order_id = self.kwargs['id']
-        return Order.objects.get(id=order_id).menu_items.all()
+class OrderMenuAPIView(generics.RetrieveAPIView):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
 
