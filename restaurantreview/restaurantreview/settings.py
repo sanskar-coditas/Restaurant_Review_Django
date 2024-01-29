@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'Customer',
     'Restaurant',
+    'Menu',
+    'Issue',
+    'Order',
 ]
 
 MIDDLEWARE = [
