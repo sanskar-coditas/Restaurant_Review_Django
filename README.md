@@ -1,4 +1,7 @@
 # Restaurant_Review_Django
+
+[Postman collection](https://gold-equinox-777912.postman.co/workspace/e7fdbf62-b150-4b7d-a106-b747a535cfce/collection/19761718-79ef695e-6de5-491f-830f-1ff2573bb7f0?action=share&creator=19761718)
+
 ![Screenshot 2024-01-29 at 3 29 10 PM](https://github.com/sanskar-coditas/Restaurant_Review_Django/assets/99340485/a4841c9e-ca56-4953-a5fe-2ea77c3fd2a9)
 <img width="599" alt="Screenshot 2024-01-29 at 4 18 14 PM" src="https://github.com/sanskar-coditas/Restaurant_Review_Django/assets/99340485/13c02d4a-f24f-4413-b791-c8364d041200">
 <img width="1012" alt="Screenshot 2024-01-29 at 4 22 41 PM" src="https://github.com/sanskar-coditas/Restaurant_Review_Django/assets/99340485/21a8e8bf-5e40-49b2-88c8-e5c5f82dc884">
