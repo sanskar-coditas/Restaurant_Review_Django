@@ -1,10 +1,10 @@
 # issues/serializers.py
 from rest_framework import serializers
 from .models import Issue
-from Order.serializers import OrderSerializer
+from Order.serializers import OrderGetSerializer
 
 class IssueSerializer(serializers.ModelSerializer):
-    order_details = OrderSerializer(source='order', read_only=True)
+    order_details = OrderGetSerializer(source='order', read_only=True)
 
     class Meta:
         model = Issue

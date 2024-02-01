@@ -4,10 +4,10 @@ from .serializers import RestaurantSerializer
 from Menu.models import Menu  
 from Menu.serializers import MenuSerializer  
 from Order.models import Order
-from Order.serializers import OrderSerializer
+from Order.serializers import OrderGetSerializer
 
 
-class RestaurantListAPIView(generics.ListAPIView):
+class RestaurantListAPIView(generics.ListCreateAPIView):
     queryset = Restaurant.objects.all()
     serializer_class = RestaurantSerializer
 
@@ -25,7 +25,7 @@ class RestaurantMenuAPIView(generics.ListAPIView):
         return Menu.objects.filter(restaurant_id=restaurant_id)
     
 class RestaurantOrderAPIView(generics.ListAPIView):
-    serializer_class = OrderSerializer
+    serializer_class = OrderGetSerializer
 
     def get_queryset(self):
         restaurant_id = self.kwargs['id']

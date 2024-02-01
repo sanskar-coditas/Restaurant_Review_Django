@@ -1,12 +1,12 @@
 from rest_framework import generics
 from .models import Customer
 from .serializers import CustomerSerializer
-from Order.serializers import OrderSerializer
+from Order.serializers import OrderGetSerializer
 from Order.models import Order
 from Issue.serializers import IssueSerializer
 from Issue.models import Issue
-
-class CustomerListAPIView(generics.ListAPIView):
+    
+class CustomerListAPIView(generics.ListCreateAPIView):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
 
@@ -16,7 +16,7 @@ class CustomerDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class CustomerOrderAPIView(generics.ListAPIView):
-    serializer_class = OrderSerializer
+    serializer_class = OrderGetSerializer
 
     def get_queryset(self):
         customer_id = self.kwargs['id']

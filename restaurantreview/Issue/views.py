@@ -3,7 +3,7 @@ from rest_framework import generics
 from .models import Issue
 from .serializers import IssueSerializer
 from Order.models import Order
-from Order.serializers import OrderSerializer
+from Order.serializers import OrderGetSerializer
 
 class IssueListAPIView(generics.ListCreateAPIView):
     queryset = Issue.objects.all()
@@ -15,7 +15,7 @@ class IssueDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class IssueOrderDetailsAPIView(generics.RetrieveAPIView):
-    serializer_class = OrderSerializer
+    serializer_class = OrderGetSerializer
 
     def get_object(self):
         issue_id = self.kwargs['id']
